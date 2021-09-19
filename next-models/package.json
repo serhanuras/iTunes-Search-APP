@@ -1,0 +1,14 @@
+{
+  "name": "@next/models",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "Serhan Uras",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}

@@ -1,0 +1,33 @@
+
+# Dependency directories
+node_modules/
+lib/
+dist/
+.vscode/
+
+# TypeScript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# next.js build output
+.vscode/settings.json
+awsconfiguration.json
+
+
+# web build files
+/web/build
+
+# mac junk
+.DS_Store
+
+# config json
+/web/src/instantiators/config*
+/portal/src/config*
+
+*.hprof
+
+config.js
+projectionRebuild
+.github/secrets/*.config.json

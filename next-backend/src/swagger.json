@@ -1,0 +1,124 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Next Backend API",
+      "description": "Next Backend API",
+      "license": {
+        "name": "",
+        "url": ""
+      }
+    },
+    "tags": [
+      {
+        "name": "MediaType",
+        "description": "This is simple REST API example for Next Homework with TypeScript"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/search-media": {
+        "post": {
+          "tags": [
+            "Search Media Request"
+          ],
+          "description": "Search query about an artist, album or song",
+          "parameters": [
+            {
+              "name": "SearchMediaReqDto",
+              "in": "body",
+              "description": "Search Media Request Object",
+              "schema": {
+                "$ref": "#/definitions/SearchMediaReqDto"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "summary": "Result for Search query about an artist, album or song",
+          "responses": {
+            "200": {
+              "description": "Search Media Response Object",
+              "schema": {
+                "$ref": "#/definitions/SearchMediaRespDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "SearchMediaReqDto": {
+        "required": [
+          "entityType",
+          "page",
+          "term"
+        ],
+        "properties": {
+          "entityType": {
+            "type": "string"
+          },
+          "page": {
+            "type": "number"
+          },
+          "term": {
+            "term": "string"
+          }
+        }
+      },
+      "SearchMediaRespDto": {
+        "type": "array",
+        "$ref": "#/definitions/SearchMediaDto"
+      },
+      "SearchMediaDto": {
+        
+        "properties": {
+          "wrapperType": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "artistName": {
+            "type": "string"
+          },
+          "collectionName": {
+            "type": "string"
+          },
+          "collectionCensoredName": {
+            "type": "string"
+          },
+          "trackCensoredName": {
+            "type": "string"
+          },
+          "artistViewUrl": {
+            "type": "string"
+          },
+          "collectionViewUrl": {
+            "type": "string"
+          },
+          "artworkUrl100": {
+            "type": "string"
+          },
+          "collectionPrice": {
+            "type": "number"
+          },
+          "country": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
